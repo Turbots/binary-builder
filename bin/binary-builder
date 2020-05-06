@@ -1,14 +1,7 @@
 #!/usr/bin/env bash
 
-# gem update --system --no-document -q --silent > /dev/null
-# gem install bundler --no-document -f -q --silent > /dev/null
-
-curl -sSL https://get.rvm.io | bash -s stable
-source /home/vcap/.rvm/scripts/rvm
-rvm install ruby
-
-gem install bundler --no-document -f -q --silent > /dev/null
-
+sudo gem update --system --no-document -q --silent > /dev/null
+sudo gem install bundler --no-document -f -q --silent > /dev/null
 bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
 bundle install
 bundle exec ./bin/binary-builder.rb "$@"
