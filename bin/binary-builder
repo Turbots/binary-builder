@@ -6,6 +6,8 @@ export GEM_PATH=~/.gem
 # gem update --system --no-document -q > /dev/null
 gem install bundler --user-install # --no-document -f -q > /dev/null
 
+ls -la ~/.gem
+
 bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
 bundle install
 bundle exec ./bin/binary-builder.rb "$@"
