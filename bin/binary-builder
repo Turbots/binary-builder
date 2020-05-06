@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-sudo gem update --system --no-document -q --silent > /dev/null
-sudo gem install bundler --no-document -f -q --silent > /dev/null
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem
+
+gem update --system --no-document -q --silent > /dev/null
+gem install bundler --no-document -f -q --silent > /dev/null
 bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
 bundle install
 bundle exec ./bin/binary-builder.rb "$@"
