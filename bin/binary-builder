@@ -2,14 +2,10 @@
 
 export GEM_HOME=~/.gem
 export GEM_PATH=~/.gem
-export PATH="$PATH:~/.ruby/bin/"
+export PATH="$PATH:~/.gem/ruby/2.5.0/bin"
 
 # gem update --system --no-document -q > /dev/null
 gem install bundler --user-install # --no-document -f -q > /dev/null
-
-ls -la ~/.gem/ruby
-ls -la ~/.gem/ruby/2.5.0
-ls -la ~/.gem/ruby/2.5.0/bin
 
 bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
 bundle install
