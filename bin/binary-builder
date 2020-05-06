@@ -9,6 +9,8 @@ echo "Ruby: `which ruby`"
 echo "Gem: `which gem`"
 echo "Bundle: `which bundle`"
 
+export GEM_HOME=~/.gem
+
 gem install bundler
 
 bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
