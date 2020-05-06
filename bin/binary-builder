@@ -7,18 +7,10 @@ rvm automount
 
 echo "Ruby: `which ruby`"
 echo "Gem: `which gem`"
-echo "Bundle: `which bundle`"
 
 export GEM_HOME=~/.gem
 
 gem install bundler
-
-echo "RUBYGEM_MIRROR: $RUBYGEM_MIRRO"
-
-echo "Current directory listing:"
-ls -la
-
-echo "Starting bundle install..."
 
 /home/vcap/.gem/gems/bundler-2.1.4/exe/bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
 /home/vcap/.gem/gems/bundler-2.1.4/exe/bundle install
