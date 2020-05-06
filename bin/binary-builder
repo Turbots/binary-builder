@@ -15,6 +15,6 @@ gem install bundler
 
 ls -laR ~/.gem/gems
 
-bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
-bundle install
-bundle exec ./bin/binary-builder.rb "$@"
+/home/vcap/.gem/gems/bundler-2.1.4/exe/bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
+/home/vcap/.gem/gems/bundler-2.1.4/exe/bundle install
+/home/vcap/.gem/gems/bundler-2.1.4/exe/bundle exec ./bin/binary-builder.rb "$@"
