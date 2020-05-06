@@ -13,7 +13,7 @@ export GEM_HOME=~/.gem
 
 gem install bundler
 
-ls -laR ~/.gem
+ls -laR ~/.gem/gems
 
 bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
 bundle install
