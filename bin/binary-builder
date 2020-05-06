@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-export GEM_HOME=~/.gem
-export GEM_PATH=~/.gem
-export PATH="$PATH:~/.gem/ruby/2.5.0/bin"
+curl -sSL https://get.rvm.io | bash -s stable
 
-# gem update --system --no-document -q > /dev/null
-gem install bundler --user-install # --no-document -f -q > /dev/null
+rvm install 2.5.0
+gem install bundler
 
 bundle config mirror.https://rubygems.org ${RUBYGEM_MIRROR}
 bundle install
